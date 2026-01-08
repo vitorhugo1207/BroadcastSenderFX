@@ -1,0 +1,42 @@
+{
+  "maxConcurrentUploads": 3,
+  "maxRetryAttempts": 2,
+  "endpoints": [
+    {
+      "id": "example-1",
+      "name": "Example API 1",
+      "url": "https://api.example.com/upload",
+      "authType": "BEARER",
+      "username": null,
+      "password": null,
+      "bearerToken": "your-bearer-token-here"
+    },
+    {
+      "id": "example-2",
+      "name": "Example API 2",
+      "url": "https://api2.example.com/files",
+      "authType": "BASIC",
+      "username": "your-username",
+      "password": "your-password",
+      "bearerToken": null
+    },
+    {
+      "id": "example-3",
+      "name": "Example API 3",
+      "url": "https://api3.example.com/upload",
+      "authType": "BASIC_BASE64",
+      "username": "your-username",
+      "password": "your-password",
+      "bearerToken": null
+    },
+    {
+      "id": "example-4",
+      "name": "No Auth API",
+      "url": "https://api4.example.com/public/upload",
+      "authType": "NONE",
+      "username": null,
+      "password": null,
+      "bearerToken": null
+    }
+  ]
+}
