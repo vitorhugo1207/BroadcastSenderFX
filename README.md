@@ -316,6 +316,40 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 For issues, questions, or suggestions, please open an issue on the GitHub repository.
 
+## 📚 Additional Documentation
+
+- [Configuration Schema](CONFIGURATION.md) - Detailed JSON configuration documentation
+- [Contributing Guide](CONTRIBUTING.md) - Guidelines for contributors
+- [Example Configuration](src/main/resources/config/example-config.json) - Sample configuration file
+
+## 🎯 Quick Reference
+
+### Keyboard Shortcuts
+
+- **Ctrl+O**: Open configuration import
+- **Ctrl+S**: Export configuration
+- **Ctrl+A**: Add files (when file list is focused)
+- **Delete**: Remove selected item (endpoint or file)
+
+### Common Tasks
+
+**Add an endpoint:**
+1. Click "Add" in Endpoints section
+2. Fill in endpoint details
+3. Click "Save"
+
+**Upload files:**
+1. Add at least one endpoint
+2. Click "Add Files" and select files
+3. Configure concurrent uploads and retry attempts
+4. Click "Start Upload"
+
+**Retry failed uploads:**
+- Click "Retry Failed" button after uploads complete
+
+**Export settings:**
+- Click "Export Config" → Choose location → Save
+
 ---
 
 **Happy Broadcasting! 🚀**
