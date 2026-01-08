@@ -286,32 +286,6 @@ This ensures your settings persist across application restarts.
 - Clear Gradle cache: `rm -rf ~/.gradle/caches/`
 - Try: `./gradlew clean build --refresh-dependencies`
 
-## 🔐 Security Notes
-
-- **Credentials Storage**: Credentials are stored in plain text in the configuration file. For production use, consider implementing encryption.
-- **HTTPS Recommended**: Always use HTTPS endpoints to protect data in transit
-- **Token Management**: Rotate bearer tokens and credentials regularly
-- **File Permissions**: Ensure configuration files have appropriate permissions
-
-## 🤝 Contributing
-
-Contributions are welcome! Please feel free to submit a Pull Request.
-
-## 📄 License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
-
-## 👨‍💻 Author
-
-**Vitor Hugo**
-
-## 🙏 Acknowledgments
-
-- JavaFX community for excellent documentation
-- ControlsFX for enhanced UI components
-- OkHttp team for the robust HTTP client
-- All open-source contributors
-
 ## 📞 Support
 
 For issues, questions, or suggestions, please open an issue on the GitHub repository.
