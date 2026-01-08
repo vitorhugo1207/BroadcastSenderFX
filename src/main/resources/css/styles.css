@@ -1,0 +1,122 @@
+/* BroadcastSender FX Styles */
+
+.root {
+    -fx-font-family: "Segoe UI", Helvetica, Arial, sans-serif;
+    -fx-font-size: 12px;
+    -fx-background-color: #f5f5f5;
+}
+
+/* Buttons */
+.button {
+    -fx-background-color: #0078d4;
+    -fx-text-fill: white;
+    -fx-background-radius: 3px;
+    -fx-cursor: hand;
+}
+
+.button:hover {
+    -fx-background-color: #106ebe;
+}
+
+.button:pressed {
+    -fx-background-color: #005a9e;
+}
+
+.button:disabled {
+    -fx-opacity: 0.5;
+}
+
+/* List views */
+.list-view {
+    -fx-background-color: white;
+    -fx-border-color: #d1d1d1;
+    -fx-border-radius: 3px;
+}
+
+.list-view .list-cell {
+    -fx-background-color: white;
+}
+
+.list-view .list-cell:filled:selected {
+    -fx-background-color: #0078d4;
+    -fx-text-fill: white;
+}
+
+.list-view .list-cell:filled:hover {
+    -fx-background-color: #e6f2ff;
+}
+
+/* Table view */
+.table-view {
+    -fx-background-color: white;
+    -fx-border-color: #d1d1d1;
+    -fx-border-radius: 3px;
+}
+
+.table-view .table-cell {
+    -fx-border-color: transparent;
+}
+
+.table-row-cell:selected {
+    -fx-background-color: #e6f2ff;
+    -fx-text-fill: black;
+}
+
+/* Progress bar */
+.progress-bar {
+    -fx-pref-height: 25px;
+}
+
+.progress-bar .bar {
+    -fx-background-color: #0078d4;
+    -fx-background-radius: 3px;
+}
+
+.progress-bar .track {
+    -fx-background-color: #e1e1e1;
+    -fx-background-radius: 3px;
+}
+
+/* Labels */
+.label {
+    -fx-text-fill: #333333;
+}
+
+/* Separators */
+.separator {
+    -fx-background-color: #d1d1d1;
+}
+
+/* Text fields */
+.text-field, .password-field {
+    -fx-background-color: white;
+    -fx-border-color: #d1d1d1;
+    -fx-border-radius: 3px;
+}
+
+.text-field:focused, .password-field:focused {
+    -fx-border-color: #0078d4;
+}
+
+/* Combo boxes */
+.combo-box {
+    -fx-background-color: white;
+    -fx-border-color: #d1d1d1;
+    -fx-border-radius: 3px;
+}
+
+/* Spinners */
+.spinner {
+    -fx-background-color: white;
+    -fx-border-color: #d1d1d1;
+    -fx-border-radius: 3px;
+}
+
+/* Split pane */
+.split-pane {
+    -fx-background-color: #f5f5f5;
+}
+
+.split-pane-divider {
+    -fx-background-color: #d1d1d1;
+}
