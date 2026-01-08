@@ -1,25 +1,26 @@
 package com.broadcastsender.model;
 
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.io.TempDir;
 
 import java.io.File;
+import java.nio.file.Files;
+import java.nio.file.Path;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 class FileAttachmentTest {
     
     @Test
-    void testFileAttachmentCreation() {
-        // Create a temporary file for testing
-        File tempFile = new File("/tmp/test-file.txt");
+    void testFileAttachmentCreation(@TempDir Path tempDir) {
         try {
-            tempFile.createNewFile();
-            tempFile.deleteOnExit();
+            // Create a temporary file for testing
+            Path tempFile = Files.createTempFile(tempDir, "test-file", ".txt");
             
-            FileAttachment attachment = new FileAttachment(tempFile);
+            FileAttachment attachment = new FileAttachment(tempFile.toFile());
             
-            assertEquals("test-file.txt", attachment.getName());
-            assertEquals(tempFile, attachment.getFile());
+            assertTrue(attachment.getName().startsWith("test-file"));
+            assertEquals(tempFile.toFile(), attachment.getFile());
             assertTrue(attachment.getSize() >= 0);
             assertNotNull(attachment.getFormattedSize());
         } catch (Exception e) {
@@ -28,13 +29,12 @@ class FileAttachmentTest {
     }
     
     @Test
-    void testFormattedSize() {
-        File tempFile = new File("/tmp/test-formatted-size.txt");
+    void testFormattedSize(@TempDir Path tempDir) {
         try {
-            tempFile.createNewFile();
-            tempFile.deleteOnExit();
+            // Create a temporary file for testing
+            Path tempFile = Files.createTempFile(tempDir, "test-formatted-size", ".txt");
             
-            FileAttachment attachment = new FileAttachment(tempFile);
+            FileAttachment attachment = new FileAttachment(tempFile.toFile());
             String formattedSize = attachment.getFormattedSize();
             
             // Should contain either B, KB, MB, or GB

@@ -82,22 +82,15 @@ public class HttpService {
                 break;
                 
             case BASIC:
-                if (endpoint.getUsername() != null && endpoint.getPassword() != null) {
-                    String credentials = endpoint.getUsername() + ":" + endpoint.getPassword();
-                    String encodedCredentials = Base64.getEncoder()
-                            .encodeToString(credentials.getBytes(StandardCharsets.UTF_8));
-                    requestBuilder.addHeader("Authorization", "Basic " + encodedCredentials);
-                    logger.debug("Added Basic authentication");
-                }
-                break;
-                
             case BASIC_BASE64:
+                // Both BASIC and BASIC_BASE64 accept plain text credentials and encode to Base64
+                // They are functionally identical but kept separate for user clarity
                 if (endpoint.getUsername() != null && endpoint.getPassword() != null) {
                     String credentials = endpoint.getUsername() + ":" + endpoint.getPassword();
                     String encodedCredentials = Base64.getEncoder()
                             .encodeToString(credentials.getBytes(StandardCharsets.UTF_8));
                     requestBuilder.addHeader("Authorization", "Basic " + encodedCredentials);
-                    logger.debug("Added Basic Base64 authentication");
+                    logger.debug("Added Basic authentication (credentials encoded to Base64)");
                 }
                 break;
         }
